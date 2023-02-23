@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=s, initial-scale=1.0" />
+    <title>石琳圓山</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
+    <link href="./tailwind-prod.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+
+
+    <!-- Global site tag (gtag.js) - Google Ads: 815347962 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-815347962"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-815347962');
+
+    </script>
+</head>
+
+<body class="text-gray-700 font-sans">
+    <nav x-data="{ open: false }" class="bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="sm:w-full flex justify-between">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="./asset/logo.png" alt="" class="logo-img">
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex">
+                        <a href="#jumbotron" class="nav-link">
+                            首頁
+                        </a>
+                        <a href="#introduction" class="ml-8 nav-link">
+                            建案介紹
+                        </a>
+                        <a href="#" class="ml-8 nav-link">
+                            環境介紹
+                        </a>
+                        <a href="#" class="ml-8 nav-link">
+                            建材介紹
+                        </a>
+                        <a href="#" class="ml-8 nav-link">
+                            地圖
+                        </a>
+                        <a href="#" class="ml-8 nav-link">
+                            Google 表格
+                        </a>
+                    </div>
+                </div>
+                <div class="ml-auto sm:hidden text-white">
+                    <a class="bg-teal-500 rounded py-2 px-4 flex" href="tel:073709626">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="h-6 w-6 fill-current text-teal-300">
+                            <path class="heroicon-ui"
+                                d="M13.04 14.69l1.07-2.14a1 1 0 011.2-.5l6 2A1 1 0 0122 15v5a2 2 0 01-2 2h-2A16 16 0 012 6V4c0-1.1.9-2 2-2h5a1 1 0 01.95.68l2 6a1 1 0 01-.5 1.21L9.3 10.96a10.05 10.05 0 003.73 3.73zM8.28 4H4v2a14 14 0 0014 14h2v-4.28l-4.5-1.5-1.12 2.26a1 1 0 01-1.3.46 12.04 12.04 0 01-6.02-6.01 1 1 0 01.46-1.3l2.26-1.14L8.28 4z" />
+                        </svg>
+                        即時來電
+                    </a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button @click="open = !open"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                            <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div :class="{'block': open, 'hidden': !open}" class="hidden sm:hidden">
+            <div class="pt-2 pb-3">
+                <a href="#jumbotron"
+                    class="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out">首頁</a>
+                <a href="#environment" class="sm-nav-link">環境</a>
+                <a href="#exterior" class="sm-nav-link">外觀</a>
+                <a href="#interior" class="sm-nav-link">室內</a>
+                <a href="#introduction" class="sm-nav-link">建案介紹</a>
+                <a href="#map" class="sm-nav-link">地圖</a>
+                <a href="#contact-form" class="sm-nav-link">聯絡表格</a>
+            </div>
+        </div>
+    </nav>
+    <!-- 導覽列 -->
+    <!-- 首頁大圖 -->
+    <header id="jumbotron">
+        <div class="header-bg-img relative">
+            <div class="text-container">
+                <!-- <h1>石琳圓山</h1> -->
+                <p class="text-sm">
+                    世代傳承 新古典藝術城堡<br /> 維安秘境.崗石豪墅 <br />
+                    獻給 家族興旺 富貴名門
+                </p>
+            </div>
+        </div>
+    </header>
+    <!-- 環境介紹 -->
+    <section id="environment" class="bg-blue-100">
+        <h2 class="text-center text-3xl flex flex-col font-medium">
+            環境介紹
+            <span class="font-serif uppercase tracking-widest text-lg font-light text-gray-500">Environment
+            </span>
+        </h2>
+        <p class="mb-8 text-xs text-center">
+            新富豪地標 ｜圓山燙金門牌 × 新文山商圈
+        </p>
+        <!-- Set up your HTML -->
+        <div class="owl-carousel owl-theme">
+            <div>
+                <img src="./asset/images/environment-1.jpg" class="w-full rounded" alt="" />
+            </div>
+            <div>
+                <img src="./asset/images/environment-2.jpg" class="w-full rounded" alt="" />
+            </div>
+        </div>
+    </section>
+    <!-- 外觀 -->
+    <section id="exterior" class="bg-teal-100">
+        <h2 class="text-center text-3xl flex flex-col font-medium">
+            外觀
+            <span class="font-serif uppercase tracking-widest text-lg font-light text-gray-500">Exterior Building
+            </span>
+        </h2>
+        <p class="mb-8 text-xs text-center">
+            世界頂尖富豪美學 ｜內涵頂級配備 × 挑高六米
+        </p>
+
+        <!-- Set up your HTML -->
+        <div class="owl-carousel owl-theme">
+            <div>
+                <img src="./asset/images/exterior-1.jpg" class="w-full rounded" alt="" />
+            </div>
+            <div>
+                <img src="./asset/images/exterior-2.jpg" class="w-full rounded" alt="" />
+            </div>
+            <div>
+                <img src="./asset/images/exterior-3.jpg" class="w-full rounded" alt="" />
+            </div>
+            <div>
+                <img src="./asset/images/exterior-4.jpg" class="w-full rounded" alt="" />
+            </div>
+        </div>
+    </section>
+    <!-- 室內 -->
+    <section id="interior" class="bg-gray-100">
+        <h2 class="text-center text-3xl flex flex-col font-medium">
+            室內介紹
+            <span class="font-serif uppercase tracking-widest text-lg font-light text-gray-500">Interior Spacing
+            </span>
+        </h2>
+        <p class="mb-8 text-xs text-center">
+            挑高六米寬闊客廳 闊绰4車庫 奢華雙廚房
+        </p>
+
+        <!-- Set up your HTML -->
+        <div class="owl-carousel owl-theme">
+            <div>
+                <img src="./asset/images/interior-1.jpg" class="w-full rounded" alt="" />
+            </div>
+            <div>
+                <img src="./asset/images/interior-2.jpg" class="w-full rounded" alt="" />
+            </div>
+            <div>
+                <img src="./asset/images/interior-3.jpg" class="w-full rounded" alt="" />
+            </div>
+            <div>
+                <img src="./asset/images/interior-4.jpg" class="w-full rounded" alt="" />
+            </div>
+        </div>
+    </section>
+    <!-- 建材 -->
+    <section id="materials" class="bg-white">
+        <h2 class="text-center text-3xl flex flex-col font-medium">
+            建材
+            <span class="font-serif uppercase tracking-widest text-lg font-light text-gray-500">Kitchen & Bathroom
+            </span>
+        </h2>
+        <p class="mb-8 text-xs text-center">
+            德國頂級bulthaup廚具 V&B壁掛馬桶 GROHER精緻龍頭 錦鋐隔音氣密窗
+        </p>
+
+        <!-- Set up your HTML -->
+        <div class="owl-carousel owl-theme">
+            <div>
+                <img src="./asset/images/stuff-1.jpg" class="w-full rounded" alt="" />
+            </div>
+            <div>
+                <img src="./asset/images/stuff-2.jpg" class="w-full rounded" alt="" />
+            </div>
+            <div>
+                <img src="./asset/images/stuff-3.jpg" class="w-full rounded" alt="" />
+            </div>
+            <div>
+                <img src="./asset/images/stuff-4.jpg" class="w-full rounded" alt="" />
+            </div>
+        </div>
+    </section>
+    <!-- 地圖 -->
+    <section id="map" class="bg-teal-100">
+        <h2 class="text-center text-3xl flex flex-col font-medium">
+            地點
+            <span class="font-serif uppercase tracking-widest text-lg font-light text-gray-500">Location</span>
+        </h2>
+        <p class="mb-8 text-xs text-center">
+            永恆的名門望族地段｜ 圓山路VS.球場路｜敬邀參觀
+        </p>
+        <div class="flex justify-center">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d941.4469965380144!2d120.341369028039!3d22.657386825843123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e052ceab96f13%3A0xd7f18bec6f9069c8!2zODMz6auY6ZuE5biC6bOl5p2-5Y2A5ZyT5bGx6LevNzPomZ8!5e0!3m2!1szh-TW!2stw!4v1587543278246!5m2!1szh-TW!2stw"
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+        </div>
+    </section>
+    <!-- 建案介紹 -->
+    <section id="introduction" class="bg-white py-10 container mx-auto px-4">
+        <h2 class="text-center text-3xl mb-8 flex flex-col font-medium">
+            建案介紹
+            <span class="font-serif uppercase tracking-widest text-lg font-light text-gray-500">Basic Information
+            </span>
+        </h2>
+        <h3 class="text-left mb-4 font-medium text-xl">經營理念</h3>
+        <p>
+            老圓山，老高雄人最愛群居的富豪地段，規劃一處維安級管理的社區別墅城堡，１８戶貴族聚落其間，鄰里相互看顧，人情至美，靜好日常，有如桃花源般的溫潤生活，讓主人在他鄉經營事業無後顧之憂。
+        </p>
+        <h3 class="text-left mb-4 mt-4 font-medium text-xl">基本資料</h3>
+        <div class="flex flex-col">
+            <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+                <div
+                    class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr>
+                                <th
+                                    class="px-6 py-3 border-b border-gray-200 bg-teal-100 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                    項目
+                                </th>
+                                <th
+                                    class="px-6 py-3 border-b border-gray-200 bg-teal-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                    描述
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr>
+                                <td
+                                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 font-medium text-gray-900">
+                                    地坪
+                                </td>
+                                <td
+                                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">
+                                    48-67坪
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 font-medium text-gray-900">
+                                    建坪
+                                </td>
+                                <td
+                                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">
+                                    130-200坪
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 font-medium text-gray-900">
+                                    車位
+                                </td>
+                                <td
+                                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">
+                                    4-5台
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 font-medium text-gray-900">
+                                    保全
+                                </td>
+                                <td
+                                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">
+                                    門禁管理
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 font-medium text-gray-900">
+                                    座向
+                                </td>
+                                <td
+                                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">
+                                    南北
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Google Form -->
+    <section id="contact-form" class="bg-white">
+        <h2 class="text-center text-3xl mb-8 flex flex-col font-medium">
+            聯絡我們
+            <span class="font-serif uppercase tracking-widest text-lg font-light text-gray-500">Contact Form</span>
+        </h2>
+        <div class="flex justify-center">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSe7mbVs4_Y-OtOYdPGizdkjJCdLvoSBYS2A5H0TnoAxPFvpLg/viewform?embedded=true"
+                width="640" height="510" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+        </div>
+    </section>
+
+    <div class="fixed w-full bg-teal-50 bottom-0 flex justify-between">
+        <a href="tel:073709626" class="px-6 text-white text-center flex-grow hover:bg-teal-100 py-4">
+            <svg class="h-6 w-6 inline-block mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.997 59.997">
+                <path
+                    d="M52.475 46.944c-1.898-3.587-8.899-7.69-8.899-7.69-1.584-.903-3.495-1.004-4.399.606 0 0-2.274 2.728-2.853 3.12-2.643 1.791-5.091 1.722-7.562-.75l-5.743-5.743-5.743-5.743c-2.472-2.472-2.541-4.919-.75-7.562.392-.579 3.12-2.853 3.12-2.853 1.609-.904 1.509-2.815.606-4.399 0 0-4.103-7.001-7.69-8.899a3.932 3.932 0 00-4.621.695l-2.537 2.537c-8.045 8.045-4.084 17.129 3.961 25.174l7.353 7.353 7.353 7.353c8.045 8.045 17.129 12.007 25.174 3.961l2.537-2.537a3.938 3.938 0 00.693-4.623z"
+                    fill="#52c306" />
+                <path
+                    d="M39.654 59.51c-1.054 0-2.128-.127-3.224-.38-4.132-.955-8.529-3.741-13.068-8.281L8.657 36.142C-1.336 26.15-2.706 16.957 4.695 9.555l2.537-2.537a4.907 4.907 0 015.796-.872c3.796 2.008 7.912 8.981 8.085 9.277.734 1.287.964 2.608.653 3.731-.234.845-.768 1.532-1.546 1.996-1.22 1.02-2.646 2.285-2.869 2.595-1.603 2.364-1.414 4.247.631 6.292l11.486 11.486c2.043 2.043 3.924 2.233 6.295.629.305-.221 1.57-1.646 2.592-2.867.463-.778 1.151-1.312 1.995-1.546 1.124-.313 2.445-.082 3.721.646.307.18 7.28 4.297 9.288 8.092a4.907 4.907 0 01-.872 5.796L49.95 54.81c-3.127 3.126-6.579 4.7-10.296 4.7zM10.717 7.569c-.758 0-1.504.296-2.07.862L6.11 10.968c-6.568 6.569-5.235 14.563 3.962 23.76l14.705 14.706c9.197 9.198 17.191 10.529 23.76 3.961l2.537-2.537a2.92 2.92 0 00.519-3.446c-1.448-2.736-6.643-6.194-8.521-7.296-.776-.443-1.6-.609-2.185-.45-.36.101-.634.324-.836.684l-.104.151c-.711.853-2.433 2.881-3.06 3.307-3.15 2.133-6.12 1.841-8.831-.87L16.568 31.451c-2.712-2.711-3.005-5.683-.871-8.831.425-.627 2.455-2.349 3.308-3.061l.15-.104c.36-.202.584-.476.684-.836.163-.588-.008-1.409-.457-2.196-.033-.057-3.995-6.768-7.289-8.511a2.955 2.955 0 00-1.376-.343z"
+                    fill="#388f04" />
+                <path
+                    d="M39.998 48.508c-.034 0-.069-.002-.104-.005-6.895-.716-11.409-5.097-11.599-5.283a1 1 0 011.403-1.425c.041.04 4.227 4.077 10.402 4.718a1.001 1.001 0 01-.102 1.995zM17.996 32.508a.994.994 0 01-.635-.229c-.229-.188-5.638-4.715-6.359-11.668a1.002 1.002 0 01.892-1.099 1.006 1.006 0 011.099.892c.635 6.12 5.592 10.291 5.642 10.332a1.002 1.002 0 01-.639 1.772z"
+                    fill="#388f04" />
+                <g fill="#efce4a">
+                    <path
+                        d="M27.362.487a1 1 0 100 2c16.892 0 30.635 13.743 30.635 30.635a1 1 0 102 0c0-17.995-14.64-32.635-32.635-32.635z" />
+                    <path
+                        d="M27.362 7.517a1 1 0 100 2c13.016 0 23.604 10.589 23.604 23.604a1 1 0 102 0C52.967 19.004 41.48 7.517 27.362 7.517z" />
+                    <path
+                        d="M27.362 14.547a1 1 0 100 2c9.14 0 16.575 7.436 16.575 16.575a1 1 0 102 0c0-10.242-8.333-18.575-18.575-18.575z" />
+                </g>
+            </svg>
+
+
+        </a>
+        <a href="https://line.me/ti/p/MFeAoqsnSL" class="px-6 text-white text-center flex-grow hover:bg-teal-100 py-4">
+            <svg class="h-6 w-6 inline-block mr-2" height="512" viewBox="0 0 24 24" width="512"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M12 .5C5.385.5 0 4.898 0 10.303c0 4.841 4.27 8.897 10.035 9.668.391.083.923.26 1.058.594.12.303.079.771.038 1.087l-.164 1.026c-.045.303-.24 1.193 1.049.649 1.291-.542 6.916-4.104 9.436-7.019 1.724-1.9 2.548-3.847 2.548-6.005C24 4.898 18.615.5 12 .5zM7.303 13.517H4.917a.636.636 0 01-.63-.633V8.083c0-.347.285-.634.63-.634.348 0 .63.287.63.634v4.167h1.756a.634.634 0 010 1.267zm2.466-.633a.634.634 0 01-.631.633.633.633 0 01-.627-.633V8.083c0-.347.282-.634.63-.634.346 0 .628.287.628.634zm5.741 0a.633.633 0 01-1.141.379l-2.443-3.338v2.958a.632.632 0 01-.631.633.632.632 0 01-.626-.633v-4.8a.63.63 0 01.624-.632c.195 0 .375.105.495.256l2.462 3.351V8.083c0-.347.282-.634.63-.634.345 0 .63.287.63.634zm3.855-3.035a.634.634 0 010 1.269H17.61v1.132h1.755a.633.633 0 010 1.267h-2.386a.633.633 0 01-.627-.633V8.083c0-.347.282-.634.63-.634h2.386c.346 0 .627.287.627.634a.63.63 0 01-.63.634H17.61v1.132z"
+                    fill="#4caf50" />
+            </svg>
+        </a>
+        <a href="https://www.facebook.com/%E7%9F%B3%E7%90%B3-%E5%9C%93%E5%B1%B1-101002244811315/"
+            class="px-6 text-white text-center flex-grow hover:bg-teal-100 py-4">
+            <svg class="h-6 w-6 inline-block mr-2" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M497 512H15c-8.284 0-15-6.716-15-15V15C0 6.716 6.716 0 15 0h482c8.284 0 15 6.716 15 15v482c0 8.284-6.716 15-15 15z"
+                    fill="#3a559f"></path>
+                <path d="M497 0H256v512h241c8.284 0 15-6.716 15-15V15c0-8.284-6.716-15-15-15z" fill="#23448e"></path>
+                <path
+                    d="M280.681 205.261v-19.248c0-43.534 13.761-42.284 55.081-42.284h1.974c5.523 0 10-4.477 10-10V85.325c0-5.5-4.5-10-10-10h-46.855c-44.753 0-81.37 36.616-81.37 81.37v19.007h-.149v29.559h-35.237c-5.523 0-10 4.477-10 10v46.755c0 5.523 4.477 10 10 10h35.237v154.658c0 5.523 4.477 10 10 10h51.249c5.523 0 10-4.477 10-10V272.017h47.263c5.523 0 10-4.477 10-10l10-46.755c0-5.523-4.477-10-10-10h-57.193z"
+                    fill="#fff"></path>
+                <path
+                    d="M337.874 205.261h-57.193v-19.248c0-43.534 13.761-42.284 55.081-42.284h1.974c5.523 0 10-4.477 10-10V85.325c0-5.5-4.5-10-10-10h-46.855A80.606 80.606 0 00256 83.238v353.437h14.612c5.523 0 10-4.477 10-10V272.017h47.263c5.523 0 10-4.477 10-10l10-46.755c-.001-5.524-4.478-10.001-10.001-10.001z"
+                    fill="#d7f2f9"></path>
+            </svg></a>
+        <a href="https://goo.gl/maps/j1Y5N7vvGEm7s3XU6"
+            class="px-6 text-white text-center flex-grow hover:bg-teal-100 py-4">
+            <svg class="h-6 w-6 inline-block mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.999 511.999">
+                <g fill="#44c868">
+                    <path
+                        d="M511.879 475.685l-40.224-221.611a7.506 7.506 0 00-3.739-5.221l-101.242-56.31a7.488 7.488 0 00-4.234-.911l18.419 237.608-.617.276 121.164 54.357a7.51 7.51 0 007.709-.937 7.5 7.5 0 002.764-7.251zM256 246.375l-103.545-53.931a7.491 7.491 0 00-3.972-.82c.359-.022.72-.02 1.078.008L131.142 429.24l121.781 54.634a7.53 7.53 0 003.077.659V246.375z" />
+                </g>
+                <g fill="#4ce166">
+                    <path
+                        d="M149.56 191.633a7.496 7.496 0 00-4.234.91l-101.243 56.31a7.504 7.504 0 00-3.739 5.221L.121 475.685a7.504 7.504 0 002.763 7.252 7.516 7.516 0 007.709.937l120.504-54.061 18.463-238.18zM362.439 191.628a7.492 7.492 0 00-2.894.818L256 246.376v238.158h.001a7.51 7.51 0 003.077-.659l121.781-54.634-18.42-237.613z" />
+                </g>
+                <path fill="#ffdb56" d="M28.154 321.233l-8.171 45.019 120.994-63.906 2.809-36.239.466-6.01z" />
+                <path
+                    d="M142.066 288.294l-1.089 14.052-120.994 63.906L.121 475.685a7.504 7.504 0 002.763 7.252 7.516 7.516 0 007.709.937l120.504-54.061 10.969-141.519z"
+                    fill="#a8eefc" />
+                <g fill="#ffbb24">
+                    <path
+                        d="M256.03 276.08l-111.778-15.983-3.275 42.249L256 477.025v-63.518l-68.637-108.078 68.667 8.213zM459.946 244.421l-48.635-27.051-46.042 10.758.576 7.436 2.274 29.334z" />
+                </g>
+                <path fill="#ffdb56"
+                    d="M372.202 317.576l-4.36-56.249-2.573-33.199L256.03 276.08v37.562l71.356-31.03z" />
+                <path
+                    d="M511.879 475.685l-10.103-55.666-133.657-155.121 4.084 52.678 137.07 165.221a7.499 7.499 0 002.606-7.112z"
+                    fill="#ffbb24" />
+                <path
+                    d="M256.481 27.465c-57.963 0-105.12 47.118-105.12 105.034 0 35.826 17.009 74.29 50.556 114.322 24.639 29.403 48.943 48.314 49.966 49.105a7.505 7.505 0 004.599 1.57 7.507 7.507 0 004.599-1.57c1.022-.791 25.327-19.702 49.966-49.105 33.547-40.032 50.556-78.495 50.556-114.322-.002-57.916-47.159-105.034-105.122-105.034zm38.93 105.033c0 21.482-17.43 38.898-38.93 38.898s-38.93-17.415-38.93-38.898 17.43-38.898 38.93-38.898 38.93 17.416 38.93 38.898z"
+                    fill="#ff4a4a" />
+                <path
+                    d="M256.481 27.465c-4.594 0-9.119.298-13.559.872 51.583 6.667 91.562 50.836 91.562 104.162 0 35.826-17.009 74.29-50.556 114.322-15.845 18.908-31.54 33.467-41.005 41.669 5.254 4.552 8.596 7.154 8.96 7.436a7.505 7.505 0 004.599 1.57 7.507 7.507 0 004.599-1.57c1.022-.791 25.327-19.702 49.966-49.105 33.547-40.032 50.556-78.495 50.556-114.322-.002-57.916-47.159-105.034-105.122-105.034z"
+                    fill="#e7343f" />
+                <path d="M259.078 483.874l45.285-20.316L256 413.507v71.026h.001a7.497 7.497 0 003.077-.659z"
+                    fill="#ffdb56" />
+                <g fill="#1ea4e9">
+                    <path
+                        d="M471.654 254.074a7.506 7.506 0 00-3.739-5.221l-7.97-4.433-91.827 20.477 133.656 155.121-30.12-165.944zM255.999 484.533c.001 0 .001 0 0 0v-7.508L140.977 302.346l-9.837 126.895 121.781 54.634a7.514 7.514 0 003.078.658z" />
+                </g>
+            </svg>
+        </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                center: true,
+                items: 1,
+                loop: true,
+                margin: 10,
+                // nav: true,
+                dots: true,
+            });
+        });
+
+    </script>
+</body>
+
+</html>
